@@ -5,3 +5,58 @@
     padding: 0;
     margin: 0;
 }
+
+/* + navbar section */
+.nav-section{
+    background-color: #111;
+    color: #fff;
+    padding: 20px 50px;
+}
+/* + top navbar */
+.nav-section .navbar-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-section .navbar-top .navbar-item:nth-child(2){
+    width: 35%;
+}
+.nav-section .navbar-top .navbar-search{
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.nav-section .navbar-top .searchInput{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    transition: 0.3s;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.nav-section .navbar-top .searchInput:hover{
+    background-color: rgb(141, 141, 141);
+}
+.nav-section .navbar-top .searchInput::placeholder{
+    color: lightgray;
+}
+.nav-section .navbar-top .search-icon{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.nav-section .navbar-top .navbar-text{
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+}
+/* / top navbar */
+
+
+
+/* / navbar section */
