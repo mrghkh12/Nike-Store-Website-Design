@@ -57,6 +57,18 @@
 }
 /* / top navbar */
 
-
-
+/* + navbar menu */
+.nav-section .navbar-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.nav-section .navbar-menu .menuItem{
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+}
+/* / navbar menu */
 /* / navbar section */
