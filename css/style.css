@@ -181,3 +181,34 @@ body{
     color: cornsilk;
 }
 /* / header slider section */
+
+/* + features section */
+.features-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.features-section .feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.features-section .feature .featureIcon{
+    width: 50px;
+    height: 50px;
+}
+.features-section .feature .featureTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+.features-section .feature .featureDesc{
+    color: gray;
+    width: 50%;
+    height: 100px;
+}
+/* / features section */
