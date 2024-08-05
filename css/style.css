@@ -212,3 +212,72 @@ body{
     height: 100px;
 }
 /* / features section */
+
+/* + product-section */
+.product-section{
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+.product-section .productImg{
+    width: 50%;
+}
+
+.product-section .productDetails{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+}
+.product-section .productDetails .productTitle{
+    font-size: 75px;
+    font-weight: 900;
+}
+.product-section .productDetails .productDesc{
+    font-size: 24px;
+    color: gray;
+}
+
+.product-section .productDetails .colorsBox ,
+.product-section .productDetails .sizesBox {
+    display: flex;
+    margin-bottom: 20px;
+}
+.product-section .productDetails .color{
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: #000;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.product-section .productDetails .color:last-child{
+    background-color: darkblue;
+}
+
+.product-section .productDetails .size{
+    padding: 5px 20px;
+    border: 1px solid #000;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.product-section .productDetails .productBuyBtn{
+    float: right;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+.product-section .productDetails .productBuyBtn:hover{
+    background-color: transparent;
+    border: 1px solid gray;
+    color: #000;
+}
+/* / product-section */
