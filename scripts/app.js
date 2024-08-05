@@ -79,6 +79,7 @@ const productsList = [
   ];
 
 const productContainer = $.querySelector('.product-section')  
+// create product elem 
 const productDetailsElemMeker = (productIndex) => {
     productContainer.innerHTML = ''
     productContainer.insertAdjacentHTML('beforeend', 
@@ -103,12 +104,12 @@ const productDetailsElemMeker = (productIndex) => {
         `
     )
 }
-
+// change product image src according color
 const changeImgSrc = e =>{
     let productImgElm = productContainer.querySelector('.productImg')
     productImgElm.src = e.target.dataset.src
 }
-
+// remove and add active class in product size
 const sizeActive = e =>{
     let sizeElemList = productContainer.querySelectorAll('.size')
     sizeElemList.forEach(item => item.classList.remove('active'))
@@ -120,6 +121,7 @@ const sliderWrapper = $.querySelector('.sliderWrapper')
 const menuItemList = $.querySelectorAll('.menuItem')
 
 const menuItemActiveLine = $.querySelector('.line-active')
+// change menu item active line position and width
 const dyanmicMenuItemActive = item => {
     if(item.classList.contains('active')){
         menuItemActiveLine.style.left = `${item.offsetLeft}px`
@@ -128,19 +130,26 @@ const dyanmicMenuItemActive = item => {
 }
 
 menuItemList.forEach((item,index) => {
+    // change menu item active line
     dyanmicMenuItemActive(item)
     item.addEventListener('click' , (e) => {
-        menuItemList.forEach(itemMenu => itemMenu.classList.remove('active'))
+        // change slide 
         sliderWrapper.style.transform = `translateX(${-100 * index}vw)`
+        // remove and add to target active class
+        menuItemList.forEach(itemMenu => itemMenu.classList.remove('active'))
         e.target.classList.add('active')
+        // change menu item active line
         dyanmicMenuItemActive(e.target)
+        // change slide with product item 
         productDetailsElemMeker(index)
     })
 })
 
+// change menu item active line
 window.addEventListener('resize' , e => {
     menuItemList.forEach(dyanmicMenuItemActive)
 })
 // - dynamic navbar menu active item and header slider 
 
+// create default product item element
 window.onload = productDetailsElemMeker(0)
