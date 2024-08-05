@@ -73,10 +73,8 @@ body{
 }
 .nav-section .navbar-menu .line-active{
     position: absolute;
-    width: 100px;
     height: 2px;
     background-color: gray;
-    left: 348px;
     bottom: 6px;
     transition: 0.5s;
 }
