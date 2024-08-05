@@ -264,6 +264,11 @@ body{
     cursor: pointer;
     font-size: 20px;
 }
+.product-section .productDetails .size.active{
+    border: 1px solid gray;
+    color: #fff;
+    background-color: #000;
+}
 
 .product-section .productDetails .productBuyBtn{
     float: right;

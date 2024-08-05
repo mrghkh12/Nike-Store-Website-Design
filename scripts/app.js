@@ -94,9 +94,9 @@ const productDetailsElemMeker = (productIndex) => {
                 <div class="color" onclick="changeImgSrc(event)" style="background-color: ${productsList[productIndex].colors[1].code};" data-src="${productsList[productIndex].colors[1].img}"></div>
             </div>
             <div class="sizesBox">
-                <div class="size">42</div>
-                <div class="size">43</div>
-                <div class="size">44</div>
+                <div class="size" onclick="sizeActive(event)">42</div>
+                <div class="size" onclick="sizeActive(event)">43</div>
+                <div class="size" onclick="sizeActive(event)">44</div>
             </div>
             <button class="productBuyBtn">BUY NOW!</button>
         </div>
@@ -107,6 +107,12 @@ const productDetailsElemMeker = (productIndex) => {
 const changeImgSrc = e =>{
     let productImgElm = productContainer.querySelector('.productImg')
     productImgElm.src = e.target.dataset.src
+}
+
+const sizeActive = e =>{
+    let sizeElemList = productContainer.querySelectorAll('.size')
+    sizeElemList.forEach(item => item.classList.remove('active'))
+    e.target.classList.add('active')
 }
 
 // + dynamic navbar menu active item and header slider 
