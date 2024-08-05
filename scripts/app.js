@@ -90,8 +90,8 @@ const productDetailsElemMeker = (productIndex) => {
             <p class="productDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nemo autem cupiditate iure, laborum nulla unde id! Debitis inventore consectetur, at ducimus temporibus dolore, labore deleniti totam expedita, sint quam.</p>
         
             <div class="colorsBox">
-                <div class="color" style="background-color: ${productsList[productIndex].colors[0].code};"></div>
-                <div class="color" style="background-color: ${productsList[productIndex].colors[1].code};"></div>
+                <div class="color" onclick="changeImgSrc(event)" style="background-color: ${productsList[productIndex].colors[0].code};" data-src="${productsList[productIndex].colors[0].img}"></div>
+                <div class="color" onclick="changeImgSrc(event)" style="background-color: ${productsList[productIndex].colors[1].code};" data-src="${productsList[productIndex].colors[1].img}"></div>
             </div>
             <div class="sizesBox">
                 <div class="size">42</div>
@@ -102,6 +102,11 @@ const productDetailsElemMeker = (productIndex) => {
         </div>
         `
     )
+}
+
+const changeImgSrc = e =>{
+    let productImgElm = productContainer.querySelector('.productImg')
+    productImgElm.src = e.target.dataset.src
 }
 
 // + dynamic navbar menu active item and header slider 
