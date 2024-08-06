@@ -448,8 +448,9 @@ html{
     justify-content: space-between;
     padding: 50px;
 }
-.footer-section .footerLeft .fMenuTitle{
-    font-size: 16px;
+.footer-section .footerLeft .fMenuTitle,
+.footer-section .footerRight .fMenuTitle{
+    font-size: 20px;
 }
 .footer-section .footerLeft .fMenuList{
     padding: 0;
@@ -458,8 +459,45 @@ html{
 .footer-section .footerLeft .fMenuList .fMenuItem{
     margin-bottom: 10px;
     color: gray;
+    font-size: 18px;
     cursor: pointer;
 }
 
+.footer-section .footerRight{
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-section .footerRight .fMailInput{
+    display: flex;
+}
+.footer-section .footerRight .fInput{
+    padding: 5px;
+}
+.footer-section .footerRight .fBtn{
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    border:2px solid #000;
+    margin-left: -2px;
+    cursor: pointer;
+}
 
+.footer-section .footerRight .fIcons{
+    display: flex;
+}
+.footer-section .footerRight .fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-section .footerRight .copyright{
+    font-weight: 300;
+    font-size: 14px;
+}
  /* / footer section */
