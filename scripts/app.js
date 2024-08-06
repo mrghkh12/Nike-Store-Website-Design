@@ -99,7 +99,7 @@ const productDetailsElemMeker = (productIndex) => {
                 <div class="size" onclick="sizeActive(event)">43</div>
                 <div class="size" onclick="sizeActive(event)">44</div>
             </div>
-            <button class="productBuyBtn">BUY NOW!</button>
+            <button class="productBuyBtn" onclick="openPaymentModal()">BUY NOW!</button>
         </div>
 
         <div class="payment-modal">
@@ -123,11 +123,24 @@ const productDetailsElemMeker = (productIndex) => {
                 <input type="text" placeholder="cvv" class="payInput sm">
             </div>
             <button class="payBtn">Checkout!</button>
-            <span class="close-modal">X</span>
+            <span class="close-modal" onclick="closePaymentModal()">X</span>
         </div>
         `
     )
 }
+
+// open payment modal wrapper btn
+const openPaymentModal = () => {
+  const paymentModalWrapper = $.querySelector('.payment-modal')
+  paymentModalWrapper.style.display = 'flex'
+}
+// close payment modal wrapper btn
+const closePaymentModal = () => {
+  const paymentModalWrapper = $.querySelector('.payment-modal')
+  paymentModalWrapper.style.display = 'none'
+}
+
+
 // change product image src according color
 const changeImgSrc = e =>{
     let productImgElm = productContainer.querySelector('.productImg')
