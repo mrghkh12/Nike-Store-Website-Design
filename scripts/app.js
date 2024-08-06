@@ -1,89 +1,90 @@
-const $ = document
+const $ = document;
 
 const productsList = [
-    {
-      id: 1,
-      title: "Air Force",
-      price: 119,
-      colors: [
-        {
-          code: "black",
-          img: "./img/air.png",
-        },
-        {
-          code: "darkblue",
-          img: "./img/air2.png",
-        },
-      ],
-    },
-    {
-      id: 2,
-      title: "Air Jordan",
-      price: 149,
-      colors: [
-        {
-          code: "lightgray",
-          img: "./img/jordan.png",
-        },
-        {
-          code: "green",
-          img: "./img/jordan2.png",
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Blazer",
-      price: 109,
-      colors: [
-        {
-          code: "lightgray",
-          img: "./img/blazer.png",
-        },
-        {
-          code: "green",
-          img: "./img/blazer2.png",
-        },
-      ],
-    },
-    {
-      id: 4,
-      title: "Crater",
-      price: 129,
-      colors: [
-        {
-          code: "black",
-          img: "./img/crater.png",
-        },
-        {
-          code: "lightgray",
-          img: "./img/crater2.png",
-        },
-      ],
-    },
-    {
-      id: 5,
-      title: "Hippie",
-      price: 99,
-      colors: [
-        {
-          code: "gray",
-          img: "./img/hippie.png",
-        },
-        {
-          code: "black",
-          img: "./img/hippie2.png",
-        },
-      ],
-    },
-  ];
+  {
+    id: 1,
+    title: "Air Force",
+    price: 119,
+    colors: [
+      {
+        code: "black",
+        img: "./img/air.png",
+      },
+      {
+        code: "darkblue",
+        img: "./img/air2.png",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Air Jordan",
+    price: 149,
+    colors: [
+      {
+        code: "lightgray",
+        img: "./img/jordan.png",
+      },
+      {
+        code: "green",
+        img: "./img/jordan2.png",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Blazer",
+    price: 109,
+    colors: [
+      {
+        code: "lightgray",
+        img: "./img/blazer.png",
+      },
+      {
+        code: "green",
+        img: "./img/blazer2.png",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Crater",
+    price: 129,
+    colors: [
+      {
+        code: "black",
+        img: "./img/crater.png",
+      },
+      {
+        code: "lightgray",
+        img: "./img/crater2.png",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Hippie",
+    price: 99,
+    colors: [
+      {
+        code: "gray",
+        img: "./img/hippie.png",
+      },
+      {
+        code: "black",
+        img: "./img/hippie2.png",
+      },
+    ],
+  },
+];
 
-const productContainer = $.querySelector('.product-section')  
-// create product elem 
+const productContainer = $.querySelector(".product-section");
+// create product elem
 const productDetailsElemMeker = (productIndex) => {
-    productContainer.innerHTML = ''
-    productContainer.insertAdjacentHTML('beforeend', 
-        `
+  productContainer.innerHTML = "";
+  productContainer.insertAdjacentHTML(
+    "beforeend",
+    `
         <img src="${productsList[productIndex].colors[0].img}" alt="" class="productImg">
         <div class="productDetails">
             <h1 class="productTitle">${productsList[productIndex].title}</h1>
@@ -126,67 +127,66 @@ const productDetailsElemMeker = (productIndex) => {
             <span class="close-modal" onclick="closePaymentModal()">X</span>
         </div>
         `
-    )
-}
+  );
+};
 
 // open payment modal wrapper btn
 const openPaymentModal = () => {
-  const paymentModalWrapper = $.querySelector('.payment-modal')
-  paymentModalWrapper.style.display = 'flex'
-}
+  const paymentModalWrapper = $.querySelector(".payment-modal");
+  paymentModalWrapper.style.display = "flex";
+};
 // close payment modal wrapper btn
 const closePaymentModal = () => {
-  const paymentModalWrapper = $.querySelector('.payment-modal')
-  paymentModalWrapper.style.display = 'none'
-}
-
+  const paymentModalWrapper = $.querySelector(".payment-modal");
+  paymentModalWrapper.style.display = "none";
+};
 
 // change product image src according color
-const changeImgSrc = e =>{
-    let productImgElm = productContainer.querySelector('.productImg')
-    productImgElm.src = e.target.dataset.src
-}
+const changeImgSrc = (e) => {
+  let productImgElm = productContainer.querySelector(".productImg");
+  productImgElm.src = e.target.dataset.src;
+};
 // remove and add active class in product size
-const sizeActive = e =>{
-    let sizeElemList = productContainer.querySelectorAll('.size')
-    sizeElemList.forEach(item => item.classList.remove('active'))
-    e.target.classList.add('active')
-}
+const sizeActive = (e) => {
+  let sizeElemList = productContainer.querySelectorAll(".size");
+  sizeElemList.forEach((item) => item.classList.remove("active"));
+  e.target.classList.add("active");
+};
 
-// + dynamic navbar menu active item and header slider 
-const sliderWrapper = $.querySelector('.sliderWrapper')
-const menuItemList = $.querySelectorAll('.menuItem')
+// + dynamic navbar menu active item and header slider
+const sliderWrapper = $.querySelector(".sliderWrapper");
+const menuItemList = $.querySelectorAll(".menuItem");
 
-const menuItemActiveLine = $.querySelector('.line-active')
+const menuItemActiveLine = $.querySelector(".line-active");
 // change menu item active line position and width
-const dyanmicMenuItemActive = item => {
-    if(item.classList.contains('active')){
-        menuItemActiveLine.style.left = `${item.offsetLeft}px`
-        menuItemActiveLine.style.width = `${item.offsetWidth}px`
-    }
-}
+const dyanmicMenuItemActive = (item) => {
+  if (item.classList.contains("active")) {
+    menuItemActiveLine.style.left = `${item.offsetLeft}px`;
+    menuItemActiveLine.style.width = `${item.offsetWidth}px`;
+  }
+};
 
-menuItemList.forEach((item,index) => {
+menuItemList.forEach((item, index) => {
+  // change menu item active line
+  dyanmicMenuItemActive(item);
+  item.addEventListener("click", (e) => {
+    // change slide
+    sliderWrapper.style.transform = `translateX(${-100 * index}vw)`;
+    // remove and add to target active class
+    menuItemList.forEach((itemMenu) => itemMenu.classList.remove("active"));
+    e.target.classList.add("active");
     // change menu item active line
-    dyanmicMenuItemActive(item)
-    item.addEventListener('click' , (e) => {
-        // change slide 
-        sliderWrapper.style.transform = `translateX(${-100 * index}vw)`
-        // remove and add to target active class
-        menuItemList.forEach(itemMenu => itemMenu.classList.remove('active'))
-        e.target.classList.add('active')
-        // change menu item active line
-        dyanmicMenuItemActive(e.target)
-        // change slide with product item 
-        productDetailsElemMeker(index)
-    })
-})
+    dyanmicMenuItemActive(e.target);
+    // change slide with product item
+    productDetailsElemMeker(index);
+  });
+});
 
 // change menu item active line
-window.addEventListener('resize' , e => {
-    menuItemList.forEach(dyanmicMenuItemActive)
-})
-// - dynamic navbar menu active item and header slider 
+window.addEventListener("resize", (e) => {
+  menuItemList.forEach(dyanmicMenuItemActive);
+});
+// - dynamic navbar menu active item and header slider
 
 // create default product item element
-window.onload = productDetailsElemMeker(0)
+window.onload = productDetailsElemMeker(0);
