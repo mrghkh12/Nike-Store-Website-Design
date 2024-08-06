@@ -569,6 +569,9 @@ html{
         align-items: center;
         height: unset;
     }
+    .product-section .productImg{
+        width: 80%;
+    }
     .product-section .productDetails{
         position: relative;
         width: 100%;
@@ -582,10 +585,24 @@ html{
         font-size: 50px;
         margin: 0;
     }
+    .product-section .productDetails .productBuyBtn{
+        margin-bottom: 15px;
+    }
 
     .product-section .payment-modal{
         width: 80% !important;
         padding: 10px 25px;
+    }
+
+    .gallery-section{
+        display: none;
+    }
+
+    .newSeason-section{
+        flex-direction: column;
+    }
+    .newSeason-section .nsItem:nth-child(2){
+        padding: 50px;
     }
  }
  /* / responsive page */
