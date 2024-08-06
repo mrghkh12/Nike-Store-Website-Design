@@ -525,9 +525,37 @@ html{
         font-weight: 700;
         font-size: 20px;
     }
+    .nav-section .navbar-menu .menuItem.active{
+        padding-bottom: 5px;
+        border-bottom: 2px solid gray;
+    }
     .nav-section .navbar-menu .line-active{
         display: none;
     }
 
+    .header-section{
+        clip-path: none;
+    }
+    .header-section .sliderItem .sliderImg{
+        width: 90%;
+    }
+    .header-section .sliderItem .sliderBg{
+        width: 100%;
+        height: 100%;
+    }
+    .header-section .sliderItem .sliderTitle{
+        display: none;
+    }
+    .header-section .sliderItem .sliderPrice{
+        top: unset;
+        bottom: 0;
+        left: 0;
+        font-size: 30px;
+        background-color: #000;
+    }
+    .header-section .sliderItem .buyButton{
+        top: 0;
+        right: 0;
+    }
  }
  /* / responsive page */
