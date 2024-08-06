@@ -214,6 +214,10 @@ body{
 /* / features section */
 
 /* + product-section */
+html{
+    scroll-behavior: smooth;
+}
+
 .product-section{
     height: 100vh;
     background-color: whitesmoke;
