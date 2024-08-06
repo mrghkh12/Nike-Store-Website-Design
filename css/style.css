@@ -402,3 +402,38 @@ html{
     font-size: 32px;
 }
 /* / gallery section */
+
+/* + new season section */
+.newSeason-section{
+    display: flex;
+}
+.newSeason-section .nsItem{
+    flex: 1;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.newSeason-section .nsItem .nsImg{
+    width: 100%;
+    height: 500px;
+}
+.newSeason-section .nsItem .nsTitle{
+    font-size: 40px;
+}
+.newSeason-section .nsItem .nsButton{
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+.newSeason-section .nsItem .nsButton:hover{
+    background-color: #46bd77;
+}
+/* / new season section */
