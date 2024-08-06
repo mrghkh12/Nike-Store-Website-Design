@@ -557,5 +557,35 @@ html{
         top: 0;
         right: 0;
     }
+
+    .features-section{
+        flex-direction: column;
+    }
+
+    .product-section{
+        clip-path: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: unset;
+    }
+    .product-section .productDetails{
+        position: relative;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-section .productDetails .productTitle{
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .product-section .payment-modal{
+        width: 80% !important;
+        padding: 10px 25px;
+    }
  }
  /* / responsive page */
