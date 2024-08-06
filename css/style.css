@@ -384,5 +384,21 @@ html{
     background-color: rgb(112, 111, 111);
 }
 /* / payment modal section */
-
 /* / product-section */
+
+/* + gallery section */
+.gallery-section{
+    padding: 50px;
+    display: flex;
+}
+.gallery-section .galleryItem{
+    flex: 1;
+    padding: 50px;
+}
+.gallery-section .galleryItem .galleryImg{
+    width: 100%;
+}
+.gallery-section .galleryItem .galleryTitle{
+    font-size: 32px;
+}
+/* / gallery section */
