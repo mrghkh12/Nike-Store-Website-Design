@@ -123,6 +123,7 @@ const productDetailsElemMeker = (productIndex) => {
                 <input type="text" placeholder="cvv" class="payInput sm">
             </div>
             <button class="payBtn">Checkout!</button>
+            <span class="close-modal">X</span>
         </div>
         `
     )

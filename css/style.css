@@ -302,7 +302,7 @@ html{
     bottom: 0;
     margin: auto;
     padding: 10px 50px;
-    display: flex;
+    display: none;
     flex-direction: column;
     box-shadow: 0 0 27px -3px rgba(0, 0, 0, 0.87);
 }
@@ -364,6 +364,24 @@ html{
 }
 .product-section .payment-modal .payBtn:hover{
     background-color: #46bd77;
+}
+
+.product-section .payment-modal .close-modal{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: #fff;
+    top: 25px;
+    right: 25px;
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.product-section .payment-modal .close-modal:hover{
+    background-color: rgb(112, 111, 111);
 }
 /* / payment modal section */
 
