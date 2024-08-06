@@ -505,7 +505,7 @@ html{
 
 
  /* + responsive page */
- @media screen and (max-width: 480px) {
+ @media screen and (max-width: 768px) {
     .nav-section{
         padding: 20px;
     }
@@ -603,6 +603,29 @@ html{
     }
     .newSeason-section .nsItem:nth-child(2){
         padding: 50px;
+    }
+
+    .footer-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section .footerLeft{
+        padding: 20px;
+        width: 90%;
+    }
+    .footer-section .footerRight{
+        padding: 20px;
+        width: 90%;
+        align-items: center;
+        background-color: whitesmoke;
+    }
+    .footer-section .footerRight .fRightMenu:nth-child(2){
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
     }
  }
  /* / responsive page */
