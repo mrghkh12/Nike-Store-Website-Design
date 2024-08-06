@@ -437,3 +437,27 @@ html{
     background-color: #46bd77;
 }
 /* / new season section */
+
+ /* + footer section */
+.footer-section{
+    display: flex;
+}
+.footer-section .footerLeft{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.footer-section .footerLeft .fMenuTitle{
+    font-size: 16px;
+}
+.footer-section .footerLeft .fMenuList{
+    padding: 0;
+    list-style: none;
+}
+.footer-section .footerLeft .fMenuList .fMenuItem{
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+}
+ /* / footer section */
