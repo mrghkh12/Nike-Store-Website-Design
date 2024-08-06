@@ -101,7 +101,8 @@ const productDetailsElemMeker = (productIndex) => {
             </div>
             <button class="productBuyBtn">BUY NOW!</button>
         </div>
-                <div class="payment-modal">
+
+        <div class="payment-modal">
             <div class="payTitle">Personal Information</div>
             <label>Name and Surname</label>
             <input type="text" placeholder="John Doe" class="payInput">
@@ -117,11 +118,11 @@ const productDetailsElemMeker = (productIndex) => {
             </div>
             <input type="password" class="payInput" placeholder="Card Number">
             <div class="cardInfo">
-                <input type="text" placeholder="mm" class="patInput sm">
-                <input type="text" placeholder="yyyy" class="patInput sm">
-                <input type="text" placeholder="cvv" class="patInput sm">
+                <input type="text" placeholder="mm" class="payInput sm">
+                <input type="text" placeholder="yyyy" class="payInput sm">
+                <input type="text" placeholder="cvv" class="payInput sm">
             </div>
-            <button class="paybtn">Checkout!</button>
+            <button class="payBtn">Checkout!</button>
         </div>
         `
     )

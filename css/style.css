@@ -289,4 +289,82 @@ html{
     border: 1px solid gray;
     color: #000;
 }
+
+ /* + payment modal section */
+.product-section .payment-modal{
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 27px -3px rgba(0, 0, 0, 0.87);
+}
+.product-section .payment-modal .payTitle{
+    font-size: 20px;
+    color: lightgray;
+    margin: 15px 0;
+}
+
+.product-section .payment-modal label{
+    font-size: 14px;
+    font-weight: 300;
+}
+.product-section .payment-modal .payInput{
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+.product-section .payment-modal .payInput::placeholder{
+    color: rgb(163, 163, 163);
+    transition: 0.3s;
+}
+.product-section .payment-modal .payInput:focus.payInput::placeholder{
+    color: #555;
+    letter-spacing: 1.5px;
+}
+
+.product-section .payment-modal .cardIcons{
+    display: flex;
+}
+.product-section .payment-modal .cardIcon{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.product-section .payment-modal .cardInfo{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.product-section .payment-modal .payInput.sm{
+    width: 30%;
+}
+
+.product-section .payment-modal .payBtn{
+    position: absolute;
+    height: 40px;
+    bottom: -40px;
+    width: 100%;
+    left: 0;
+    box-shadow: -1px 7px 13px -3px rgba(0, 0, 0, 0.5);
+    background-color: #369e62;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.product-section .payment-modal .payBtn:hover{
+    background-color: #46bd77;
+}
+/* / payment modal section */
+
 /* / product-section */
