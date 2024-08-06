@@ -501,3 +501,33 @@ html{
     font-size: 14px;
 }
  /* / footer section */
+
+
+
+ /* + responsive page */
+ @media screen and (max-width: 480px) {
+    .nav-section{
+        padding: 20px;
+    }
+    .nav-section .navbar-top .navbar-search{
+        display: none;
+    }
+    .nav-section .navbar-top .navbar-text{
+        font-size: 16px;
+        display: block;
+        width: max-content;
+    }
+    .nav-section .navbar-menu{
+        flex-wrap: wrap;
+    }
+    .nav-section .navbar-menu .menuItem{
+        margin: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .nav-section .navbar-menu .line-active{
+        display: none;
+    }
+
+ }
+ /* / responsive page */
